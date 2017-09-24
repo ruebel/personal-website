@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import BigTitle from './BigTitle';
 import Knockout from './Knockout';
 import NavLink from './NavLink';
 import Page from './Page';

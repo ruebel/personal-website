@@ -20,6 +20,8 @@ export default styled.div`
   @media (max-width: ${p => p.theme.deviceWidth.largePhone}) {
     width: 100%;
     max-width: none;
+    padding: 0.3em;
+    font-size: 4em;
   }
 
   &:before {
