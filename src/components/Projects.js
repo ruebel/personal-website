@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import BigTitle from './BigTitle';
+import Knockout from './Knockout';
 import NavLink from './NavLink';
 import Page from './Page';
 import Wide from './Wide';
@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <Page>
       <Wrapper>
-        <BigTitle src="bg.gif">
+        <Knockout src="bg.gif">
           <NavLink to="https://ruebel.github.io/granular/">
             <Wide>granular</Wide>
           </NavLink>
@@ -26,7 +26,7 @@ const Projects = () => {
           <NavLink to="/">
             <Wide>&lt;home</Wide>
           </NavLink>
-        </BigTitle>
+        </Knockout>
       </Wrapper>
     </Page>
   );

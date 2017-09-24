@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import BigTitle from './BigTitle';
+// import BigTitle from './BigTitle';
+import Knockout from './Knockout';
 import NavLink from './NavLink';
 import Page from './Page';
 import Wide from './Wide';
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <Page>
       <Wrapper>
-        <BigTitle src="bg.gif">
+        <Knockout src="bg.gif">
           <Wide>RANDY</Wide>
           <Wide>UEBEL</Wide>
           <NavLink to="https://github.com/ruebel">
@@ -31,7 +32,7 @@ const Home = () => {
           <NavLink to="/projects">
             <Wide>projects</Wide>
           </NavLink>
-        </BigTitle>
+        </Knockout>
       </Wrapper>
     </Page>
   );

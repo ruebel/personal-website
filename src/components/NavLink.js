@@ -8,7 +8,10 @@ const StyledAnchor = styled.a`
   color: inherit;
 `;
 
-const StyledLink = styled(RouterLink)`text-decoration: none;`;
+const StyledLink = styled(RouterLink)`
+  text-decoration: none;
+  color: inherit;
+`;
 
 const NavLink = ({ activeClassName, children, exact = true, to }) => {
   return to.indexOf('.') > -1 ? (

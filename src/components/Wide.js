@@ -9,7 +9,8 @@ const Wrapper = styled.div`
   margin-bottom: 0.25em;
 
   &:hover {
-    -webkit-text-fill-color: ${p => p.theme.color.primary};
+    color: ${p => p.theme.color.primary};
+    mix-blend-mode: exclusion;
   }
 `;
 
