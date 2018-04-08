@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledAnchor = styled.a`
@@ -8,20 +7,11 @@ const StyledAnchor = styled.a`
   color: inherit;
 `;
 
-const StyledLink = styled(RouterLink)`
-  text-decoration: none;
-  color: inherit;
-`;
-
 const NavLink = ({ activeClassName, children, exact = true, to }) => {
-  return to.indexOf('.') > -1 ? (
+  return (
     <StyledAnchor href={to} target="_blank">
       {children}
     </StyledAnchor>
-  ) : (
-    <StyledLink activeClassName={activeClassName} exact={exact} to={to}>
-      {children}
-    </StyledLink>
   );
 };
 

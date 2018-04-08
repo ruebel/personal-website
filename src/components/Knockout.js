@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  color: #fff;
+  color: #ff00ff;
   background: #000;
   mix-blend-mode: lighten;
   display: inline-block;
@@ -25,10 +25,21 @@ export default styled.div`
   }
 
   &:before {
-    background-image: url(${p => p.src});
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(311deg, #246655, #099cff, #ffa309, #8609ff);
+    background-size: 800% 800%;
+    animation: bgAnim 10s ease infinite;
+
+    @keyframes bgAnim {
+      0% {
+        background-position: 1% 0%;
+      }
+      50% {
+        background-position: 99% 100%;
+      }
+      100% {
+        background-position: 1% 0%;
+      }
+    }
     mix-blend-mode: multiply;
     display: block;
     position: absolute;

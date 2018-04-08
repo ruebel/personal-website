@@ -7,10 +7,12 @@ const Wrapper = styled.div`
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 0.25em;
+  transition: all 300ms ease-in-out;
 
   &:hover {
     color: ${p => p.theme.color.primary};
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
+    transform: skew(5deg, 0deg) scale(1, 1.1);
   }
 `;
 

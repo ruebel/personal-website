@@ -11,7 +11,7 @@ injectGlobal`
     padding: 0;
     margin: 0;
     font-size: 12px;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     font-family: sans-serif;
     color: ${color.primary};

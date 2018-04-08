@@ -2,7 +2,9 @@ import styled from 'styled-components';
 
 export default styled.div`
   position: fixed;
-  bottom: 0.5em;
+  bottom: 0;
   text-align: center;
   width: 100%;
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.5);
 `;

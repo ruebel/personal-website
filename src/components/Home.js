@@ -28,9 +28,6 @@ const Home = () => {
           <NavLink to="http://huntedhorse.com">
             <Wide>music</Wide>
           </NavLink>
-          <NavLink to="/projects">
-            <Wide>projects</Wide>
-          </NavLink>
         </Knockout>
       </Wrapper>
     </Page>
