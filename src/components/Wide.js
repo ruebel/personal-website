@@ -9,6 +9,10 @@ const Wrapper = styled.div`
   margin-bottom: 0.25em;
   transition: all 300ms ease-in-out;
 
+  @media (max-width: ${p => p.theme.deviceWidth.largePhone}) {
+    margin: 0.8em 0;
+  }
+
   &:hover {
     color: ${p => p.theme.color.primary};
     mix-blend-mode: difference;

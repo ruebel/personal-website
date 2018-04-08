@@ -6,5 +6,4 @@ export default styled.div`
   text-align: center;
   width: 100%;
   padding: 0.5em;
-  background: rgba(0, 0, 0, 0.5);
 `;

@@ -4,7 +4,8 @@ export default styled.div`
   color: #ff00ff;
   background: #000;
   mix-blend-mode: lighten;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 0;
   font-size: 6em;
   font-weight: bold;
@@ -22,6 +23,8 @@ export default styled.div`
     max-width: none;
     padding: 0.3em;
     font-size: 4em;
+    justify-content: space-around;
+    height: 100%;
   }
 
   &:before {
