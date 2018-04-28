@@ -16,17 +16,17 @@ const Home = () => {
   return (
     <Page>
       <Wrapper>
-        <Knockout src="bg.gif">
-          <Wide>RANDY</Wide>
-          <Wide>UEBEL</Wide>
+        <Knockout>
+          <Wide>{['RANDY', 'RANDALL']}</Wide>
+          <Wide>{['UEBEL', 'ÜBEL']}</Wide>
           <NavLink to="https://github.com/ruebel">
-            <Wide>code</Wide>
+            <Wide>{['code', 'github']}</Wide>
           </NavLink>
           <NavLink to="https://www.linkedin.com/in/randy-uebel-06b7145b">
-            <Wide>resume</Wide>
+            <Wide>{['resume', 'linkedin']}</Wide>
           </NavLink>
           <NavLink to="http://huntedhorse.com">
-            <Wide>music</Wide>
+            <Wide>{['music']}</Wide>
           </NavLink>
         </Knockout>
       </Wrapper>
