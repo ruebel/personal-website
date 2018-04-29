@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Footer from './Footer';
 
 const Wrapper = styled.div`
+  background: linear-gradient(to bottom right, #fe0000, #deff00);
   min-height: 100vh;
   width: 100%;
 `;

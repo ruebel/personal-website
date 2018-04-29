@@ -28,9 +28,8 @@ const Wrapper = styled.div`
   }
 
   &:hover {
-    color: ${p => p.theme.color.primary};
-    mix-blend-mode: difference;
     animation: ${anim} 300ms linear;
+    color: ${p => p.theme.color.tertiary};
   }
 `;
 
@@ -73,7 +72,7 @@ class Wide extends React.Component {
           if (this.state.in < children[this.state.position].length) {
             setTimeout(this.next, randomTime(100, 300));
           } else {
-            setTimeout(this.reset, randomTime(5000, 14000));
+            setTimeout(this.reset, randomTime(5000, 12000));
           }
         }
       }

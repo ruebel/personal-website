@@ -1,6 +1,7 @@
 export const color = {
-  primary: '#ccc',
-  secondary: '#000'
+  primary: '#6dbdff',
+  secondary: '#000',
+  tertiary: '#ccc'
 };
 
 export const deviceWidth = {
