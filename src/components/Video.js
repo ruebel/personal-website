@@ -55,14 +55,7 @@ class Video extends React.Component {
     const { src } = this.props;
     return (
       <Wrapper ready={this.state.ready}>
-        <VideoBase
-          autoPlay
-          loop
-          muted
-          onLoadedData={this.onReady}
-          playsInline
-          ref="video"
-        >
+        <VideoBase autoPlay loop muted onLoadedData={this.onReady} playsInline>
           <source src={src} type="video/mp4" />
           <source src={src} type="video/ogg" />
           Your browser does not support the video tag.
