@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import Footer from './Footer';
 
 const Wrapper = styled.div`
-  background: linear-gradient(to bottom right, #fe0000, #deff00);
+  background: #120402;
   min-height: 100vh;
   width: 100%;
 `;
 
-const Page = ({ children }) => {
+const Page = ({ children, videoReady }) => {
   return (
-    <Wrapper>
+    <Wrapper videoReady={videoReady}>
       {children}
       <Footer>© {new Date().getFullYear()} Randy Uebel</Footer>
     </Wrapper>
@@ -22,7 +22,8 @@ Page.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
-  ])
+  ]),
+  videoReady: PropTypes.bool
 };
 
 export default Page;

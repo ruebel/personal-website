@@ -29,7 +29,7 @@ const mobileIntroAnim = p => keyframes`
     width: 25vw;
   }
   100% {
-    height: 100vh;
+    height: 85vh;
     width: 100vw;
   }
 `;

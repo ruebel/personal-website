@@ -1,9 +1,8 @@
 # randyuebel.com
-My Personal Website
+> My personal website
 
 ## tech
 * react
-* react-router
 * styled-components
 
 ## license

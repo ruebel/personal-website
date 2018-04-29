@@ -3,16 +3,8 @@ import styled from 'styled-components';
 import Knockout from './Knockout';
 import NavLink from './NavLink';
 import Page from './Page';
+import Video from './Video';
 import Wide from './Wide';
-
-const Video = styled.video`
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  mix-blend-mode: multiply;
-`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -33,11 +25,7 @@ class Home extends React.Component {
   render() {
     return (
       <Page>
-        <Video autoPlay loop poster="poster.jpg">
-          <source src="bg.mp4" type="video/mp4" />
-          <source src="bg.mp4" type="video/ogg" />
-          Your browser does not support the video tag.
-        </Video>
+        <Video src="bg.mp4" />
         <Wrapper>
           <Knockout>
             {this.state.expanded ? (
