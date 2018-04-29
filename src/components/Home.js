@@ -39,7 +39,7 @@ class Home extends React.Component {
                   <Wide>{['resume', 'linkedin']}</Wide>
                 </NavLink>
                 <NavLink to="http://huntedhorse.com">
-                  <Wide>{['music']}</Wide>
+                  <Wide>{['music', 'noise']}</Wide>
                 </NavLink>
               </div>
             ) : (
