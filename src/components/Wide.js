@@ -48,7 +48,8 @@ class Wide extends React.Component {
   state = {
     hover: false,
     in: 0,
-    position: 0
+    position: 0,
+    timer: null
   };
 
   componentDidMount() {
@@ -58,9 +59,7 @@ class Wide extends React.Component {
   hover = () => this.setState({ hover: true });
 
   leave = () =>
-    this.setState({ hover: false }, () =>
-      setTimeout(this.next, randomTime(100, 300))
-    );
+    this.setState({ hover: false }, () => this.setTimer(this.next, 300, 500));
 
   next = () => {
     if (this.state.hover) return;
@@ -70,9 +69,9 @@ class Wide extends React.Component {
       () => {
         if (!this.state.hover) {
           if (this.state.in < children[this.state.position].length) {
-            setTimeout(this.next, randomTime(100, 300));
+            this.setTimer(this.next, 100, 300);
           } else {
-            setTimeout(this.reset, randomTime(5000, 12000));
+            this.setTimer(this.reset, 5000, 12000);
           }
         }
       }
@@ -90,8 +89,15 @@ class Wide extends React.Component {
           position: nextPos < children.length ? nextPos : 0
         };
       },
-      () => setTimeout(this.next, randomTime(100, 300))
+      () => this.setTimer(this.next, 500, 750)
     );
+  };
+
+  setTimer = (action, min, max) => {
+    if (this.state.timer) {
+      clearTimeout(this.state.timer);
+    }
+    setTimeout(action, randomTime(min, max));
   };
 
   render() {
