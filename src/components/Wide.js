@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled, { keyframes } from "styled-components";
 
 const anim = keyframes`
   0% {
@@ -18,9 +18,11 @@ const anim = keyframes`
 `;
 
 const Wrapper = styled.div`
+  color: ${p => p.theme.color.primary};
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  font-size: ${p => (p.isSmall ? 0.5 : 1)}em;
   margin-bottom: 0.25em;
 
   @media (max-width: ${p => p.theme.deviceWidth.largePhone}) {
@@ -34,13 +36,13 @@ const Wrapper = styled.div`
 `;
 
 const createSpaced = text =>
-  text.split('').map((t, i) => <div key={i}>{t}</div>);
+  text.split("").map((t, i) => <div key={i}>{t}</div>);
 
 const createConsoleString = (text, pos) =>
   text
-    .split('')
-    .map((t, i) => (i < pos ? t : i === pos ? '_' : ' '))
-    .join('');
+    .split("")
+    .map((t, i) => (i < pos ? t : i === pos ? "_" : " "))
+    .join("");
 
 const randomTime = (min, max) => Math.random() * (max - min) + min;
 
@@ -101,13 +103,18 @@ class Wide extends React.Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, noAnimation, isSmall } = this.props;
     const child = children[this.state.position];
-    const sub = this.state.hover
-      ? child
-      : createConsoleString(child, this.state.in);
+    const sub =
+      this.state.hover || noAnimation
+        ? child
+        : createConsoleString(child, this.state.in);
     return (
-      <Wrapper onMouseEnter={this.hover} onMouseLeave={this.leave}>
+      <Wrapper
+        isSmall={isSmall}
+        onMouseEnter={this.hover}
+        onMouseLeave={this.leave}
+      >
         {createSpaced(sub)}
       </Wrapper>
     );
@@ -115,7 +122,9 @@ class Wide extends React.Component {
 }
 
 Wide.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.string).isRequired
+  children: PropTypes.arrayOf(PropTypes.string).isRequired,
+  noAnimation: PropTypes.bool,
+  isSmall: PropTypes.bool
 };
 
 export default Wide;

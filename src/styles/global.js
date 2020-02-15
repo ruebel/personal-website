@@ -1,7 +1,7 @@
-import { injectGlobal } from 'styled-components';
-import { color } from './theme';
+import { createGlobalStyle } from "styled-components";
+import { color } from "./theme";
 
-injectGlobal`
+createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 12px;
@@ -21,5 +21,7 @@ injectGlobal`
   *::before,
   *::after {
     box-sizing: inherit;
+    color: ${color.primary};
+    font-family: sans-serif;
   }
 `;

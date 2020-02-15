@@ -20,7 +20,9 @@
         "env",
         {
           "targets": {
-            "browsers": ["last 2 versions"]
+            "browsers": [
+              "last 2 versions"
+            ]
           }
         }
       ],
@@ -42,19 +44,32 @@
     "parser": "babel-eslint"
   },
   "dependencies": {
-    "prop-types": "^15.5.10",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "react-scripts": "1.1.4",
-    "styled-components": "^3.2.5"
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.4.0",
+    "react-soundplayer": "^1.0.4",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.1.7",
-    "babel-preset-env": "^1.6.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "eslint": "^4.7.1",
-    "eslint-config-gsandf-react": "^1.0.2",
-    "prettier": "^1.7.0"
+    "eslint": "^6.8.0",
+    "eslint-config-gsandf-react": "^2.0.1",
+    "prettier": "^1.19.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

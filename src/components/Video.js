@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const VideoBase = styled.video`
   margin-bottom: -5px;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   background: ${p =>
     p.ready
       ? `linear-gradient(311deg, #246655, #099cff, #ffa309, #8609ff)`
-      : 'transparent'};
+      : "transparent"};
   background-size: 400% 400%;
   animation: bgAnim 10s ease infinite;
 

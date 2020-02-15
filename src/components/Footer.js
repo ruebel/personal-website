@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export default styled.div`
-  position: fixed;
   bottom: 0;
+  color: ${p => p.theme.color.primary};
+  padding: 0.5em;
+  position: fixed;
   text-align: center;
   width: 100%;
-  padding: 0.5em;
 `;
