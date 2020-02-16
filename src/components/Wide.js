@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   font-size: ${p => (p.isSmall ? 0.5 : 1)}em;
   margin-bottom: 0.25em;
+  transition: all 300ms linear;
 
   @media (max-width: ${p => p.theme.deviceWidth.largePhone}) {
     margin: 0.8em 0;

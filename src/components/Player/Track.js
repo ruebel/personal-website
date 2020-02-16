@@ -7,8 +7,9 @@ const Wrapper = styled.div`
   cursor: pointer;
   font-size: 0.3em;
   letter-spacing: 4px;
-  margin-left: 12px;
+  padding-left: 32px;
   position: relative;
+  text-align: left;
 
   &:hover {
     color: ${p => p.theme.color.tertiary};
@@ -16,18 +17,18 @@ const Wrapper = styled.div`
     text-decoration: line-through;
 
     &::before {
-      background-color: ${p => p.theme.color.tertiary};
+      border-color: ${p => p.theme.color.tertiary};
     }
   }
 
   &::before {
-    background-color: ${p =>
-      p.isActive ? p.theme.color.tertiary : p.theme.color.primary};
-    bottom: 0;
-    content: "";
-    height: 12%;
+    border-bottom: ${p =>
+      p.isActive ? p.theme.color.tertiary : "transparent"} 4px solid;
+    content: "${p => p.index + 1}.";
     left: -12px;
+    letter-spacing: 1px;
     position: absolute;
+    text-align: left;
     width: ${p => (p.isActive ? p.progress * 98 + 2 : 2)}%;
   }
 
@@ -44,7 +45,7 @@ const Track = ({ activeIndex, index, onClick, progress, track }) => {
   return (
     <Wrapper
       isActive={index === activeIndex}
-      off={Math.abs(index - activeIndex)}
+      index={index}
       onClick={() => onClick(index)}
       progress={progress}
     >

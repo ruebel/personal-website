@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-import { useRouteContext } from "./RouteContext";
+import { useRouter } from "./RouteContext";
 
 const anim = keyframes`
   0% {
@@ -31,7 +31,7 @@ const StyledAnchor = styled.a`
 `;
 
 const Back = () => {
-  const { goBack } = useRouteContext();
+  const { goBack } = useRouter();
   return <StyledAnchor onClick={() => goBack()}>←</StyledAnchor>;
 };
 

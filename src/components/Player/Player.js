@@ -49,7 +49,6 @@ const Wrapper = styled.div`
 
 class Player extends React.Component {
   static propTypes = {
-    onClose: PropTypes.func.isRequired,
     playlist: PropTypes.object,
     soundCloudAudio: PropTypes.object
   };
@@ -87,7 +86,7 @@ class Player extends React.Component {
   };
 
   render() {
-    const { onClose, playlist } = this.props;
+    const { playlist } = this.props;
     return (
       <Wrapper>
         {playlist ? (
@@ -98,9 +97,7 @@ class Player extends React.Component {
             tracks={playlist.tracks}
           />
         ) : (
-          <Loading pending onClick={onClose}>
-            X
-          </Loading>
+          <Loading pending>X</Loading>
         )}
       </Wrapper>
     );
