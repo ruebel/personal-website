@@ -92,7 +92,7 @@ class Wide extends React.Component {
           position: nextPos < children.length ? nextPos : 0
         };
       },
-      () => this.setTimer(this.next, 500, 750)
+      () => this.setTimer(this.next, 600, 1000)
     );
   };
 
