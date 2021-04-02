@@ -27,7 +27,8 @@ const Wrapper = styled.div`
   transition: all 300ms linear;
 
   @media (max-width: ${p => p.theme.deviceWidth.largePhone}) {
-    margin: 0.8em 0;
+    font-size: 0.7em;
+    margin: 0.5em 0;
   }
 
   &:hover {

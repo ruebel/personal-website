@@ -51,6 +51,7 @@ export default styled.div`
     font-size: 4em;
     justify-content: space-around;
     max-width: none;
+    overflow-y: auto;
     padding: 0.3em;
   }
 `;

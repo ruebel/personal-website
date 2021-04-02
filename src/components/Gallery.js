@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
 
 const Img = styled.img`
-  height: 400px;
+  max-height: 400px;
+
+  @media (max-width: ${p => p.theme.deviceWidth.largePhone}) {
+    max-height: 300px;
+  }
 `;
 
 const anim = keyframes`

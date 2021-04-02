@@ -25,7 +25,7 @@ const clientId = "ca1f6b04464964bb9ed82eaa129f5cc7";
 const Dewey = () => {
   return (
     <Wrapper>
-      <Wide noAnimation>{["DEWEY DECIBEL"]}</Wide>
+      <Wide noAnimation>{["Dewey Decibel"]}</Wide>
       <Wide noAnimation isSmall>
         {["The Dusting"]}
       </Wide>
