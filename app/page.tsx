@@ -14,7 +14,7 @@ export default function Home() {
         delayStart={true}
         href="https://www.linkedin.com/in/randy-uebel-06b7145b"
       >
-        {["resumé", "linkedin"]}
+        {["resume", "linkedin"]}
       </Banner>
       <Banner delayStart={true} href="/music">
         {["music", "noise"]}
