@@ -1,9 +1,12 @@
 # randyuebel.com
+
 > My personal website
 
 ## tech
-* react
-* styled-components
+
+- react
+- nextjs
 
 ## license
+
 MIT © [Randy Uebel](randy.uebel@gmail.com)

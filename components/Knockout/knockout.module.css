@@ -1,0 +1,51 @@
+@keyframes knockoutAnim {
+  0% {
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 25vw;
+  }
+  50% {
+    background-color: var(--primary);
+    color: var(--primary);
+    width: 25vw;
+  }
+  100% {
+    width: 75vw;
+  }
+}
+
+@keyframes knockoutSmallAnim {
+  0% {
+    background-color: var(--primary);
+    color: var(--secondary);
+    width: 75vw;
+  }
+
+  50% {
+    background-color: var(--primary);
+    color: var(--primary);
+    width: 75vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+.knockout {
+  animation: knockoutAnim 2000ms forwards;
+  border: 0.125em solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  font-size: 6em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.5em 0.75em;
+  position: relative;
+  text-align: center;
+
+  @media screen and (max-width: 600px) {
+    animation: knockoutSmallAnim 2000ms forwards;
+    padding: 0.25em 0.5em;
+  }
+}

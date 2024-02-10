@@ -2,74 +2,26 @@
   "name": "randyuebel.com",
   "version": "0.1.0",
   "homepage": "http://randyuebel.com",
-  "main": "docs/index.js",
   "author": "Randy Uebel <randy.uebel@gmail.com>",
   "repository": "https://github.com/ruebel/personal-webiste",
   "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "prebuild": "rm -rf ./docs",
-    "build": "react-scripts build",
-    "postbuild": "mv ./build ./docs",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": [
-              "last 2 versions"
-            ]
-          }
-        }
-      ],
-      "react",
-      "stage-2"
-    ],
-    "plugins": [
-      [
-        "styled-components",
-        {
-          "displayName": false,
-          "preprocess": false
-        }
-      ]
-    ]
-  },
-  "eslintConfig": {
-    "extends": "gsandf-react",
-    "parser": "babel-eslint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.0",
-    "react-soundplayer": "^1.0.4",
-    "styled-components": "^5.0.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.1.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "eslint": "^6.8.0",
-    "eslint-config-gsandf-react": "^2.0.1",
-    "prettier": "^1.19.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0"
   }
 }

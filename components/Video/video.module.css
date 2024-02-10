@@ -1,0 +1,30 @@
+.video {
+  min-height: 100%;
+  min-width: 100%;
+  mix-blend-mode: multiply;
+}
+
+@keyframes bgAnim {
+  0% {
+    background-position: 1% 0%;
+  }
+
+  50% {
+    background-position: 99% 100%;
+  }
+
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+.wrapper {
+  background: linear-gradient(311deg, #246655, #099cff, #ffa309, #8609ff);
+  background-size: 400% 400%;
+  animation: bgAnim 10s ease infinite;
+  position: fixed;
+  right: -25px;
+  bottom: -25px;
+  top: -25px;
+  left: -25px;
+}
